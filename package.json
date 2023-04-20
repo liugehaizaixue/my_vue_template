@@ -1,24 +1,41 @@
 {
-  "name": "searchword",
+  "name": "vue-web-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint --fix --ext .js,.vue src"
   },
   "dependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/reactivity": "^3.2.39",
+    "axios": "^0.26.1",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "element-plus": "^2.1.8",
+    "element-ui": "^2.15.6",
+    "sass-loader": "^12.6.0",
+    "vue": "^2.6.11",
+    "vue-axios": "^3.4.1",
+    "vue-router": "^3.2.0",
+    "vue-template-compiler": "^2.7.10",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.13",
-    "@vue/cli-plugin-eslint": "~4.5.13",
+    "webpack": "^4.46.0",
+    "@babel/preset-env": "^7.19.1",
+    "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "~4.5.13",
     "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^8.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.4.0",
+    "prettier-eslint": "^15.0.1",
+    "vue-resource": "^1.5.3"
   },
   "eslintConfig": {
     "root": true,
@@ -26,13 +43,19 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-use-before-define": "off",
+      "no-unused-vars": "off",
+      "prettier/prettier": "warn",
+      "vue/no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
