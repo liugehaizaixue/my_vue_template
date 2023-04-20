@@ -1,4 +1,4 @@
-# searchword
+# vue-web-template
 
 ## Project setup
 ```
